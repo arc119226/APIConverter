@@ -1,0 +1,27 @@
+<configuration>
+	<property name="APP_HOME" value="C:/opt/logs" />
+	<appender name="FILE-AUDIT"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${APP_HOME}/log/ArcareAPIConverter.log</file>
+		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+			<Pattern>
+				%d{yyyy-MM-dd HH:mm:ss}[%thread][%p][%c][%M][%L]%m%n
+			</Pattern>
+		</encoder>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<!-- rollover daily -->
+			<fileNamePattern>${APP_HOME}/log/archived/ArcareAPIConverter.%d{yyyy-MM-dd}.%i.log
+			</fileNamePattern>
+			<timeBasedFileNamingAndTriggeringPolicy
+				class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+				<maxFileSize>10MB</maxFileSize>
+			</timeBasedFileNamingAndTriggeringPolicy>
+		</rollingPolicy>
+	</appender>
+	<logger name="com.arcare" level="debug" additivity="false">
+		<appender-ref ref="FILE-AUDIT" />
+	</logger>
+	<root level="error">
+		<appender-ref ref="FILE-AUDIT" />
+	</root>
+</configuration>

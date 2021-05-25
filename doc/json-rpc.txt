@@ -1,0 +1,27 @@
+//TASK
+{
+	"jsonrpc":"2.0",
+	"method":"task",
+	"params":{"strTaskId":"{<uuid>}",
+		  "strAccessToken":"<access token>",
+		  "strHeader":{},
+		  "strData":{"strUuid":"0954112dc522",
+			     "strOsType":"IOS 12.1.2",
+			     "strUserName":"DemoUser",
+			     "strAccount":"DemoUser",
+			     "strPassword":"Arcare1234",
+			     "strEmail":"service@arcare.com.tw",
+			      "strLangCode":"950"}
+			  },
+	"id":1
+}
+//API
+{
+	"jsonrpc":"2.0",
+	"method":"sequence",
+	"params":{"strApiId":"{<uuid>}",
+		  "strData":{"strUuid":"${strUuid}",
+			     "strOsType":"${strOsType}"}
+		},
+	"id":1
+}

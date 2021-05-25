@@ -1,0 +1,99 @@
+[
+{
+	"jsonrpc":"2.0",
+	"method":"sequence",
+	"params":{"strAppId":3,
+			  "strData":{}
+			},
+	"id":1
+},
+{
+	"jsonrpc":"2.0",
+	"method":"parallel",
+	"params":{"strAppId":1,
+			  "strData":{"test1":"add_v1",
+						 "test2":"add_v2",
+						"test3":"add_v3"}
+			},
+	"id":2
+},
+{
+	"jsonrpc":"2.0",
+	"method":"parallel",
+	"params":{"strAppId":1,
+			  "strData":{"test1":"xxxv4",
+						 "test2":"xxxv5",
+			  			 "test3":"xxxxv6"}
+			},
+	"id":3
+},
+{
+	"jsonrpc":"2.0",
+	"method":"sequence",
+	"params":{"strAppId":2,
+			  "strData":{}
+			},
+	"id":4
+},
+{
+	"jsonrpc":"2.0",
+	"method":"sequence",
+	"params":{"strAppId":4,
+			  "strData":{"default_1":"1",
+						 "default_2":"2",
+			  			 "default_3":"3",
+			  			"default_4":"4",
+						"default_5":"5",
+						"default_6":"6",
+						"default_7":"7",
+						"default_8":"8",
+						"default_9":"9",
+						"default_10":"10",
+						"default_11":"11",
+						"default_12":"12",
+						"default_13":"13",
+						"default_14":"14",
+						"default_15":"15",
+						"default_16":"16",
+						"default_17":"17",
+						"default_18":"18",
+						"default_19":"19",
+						"default_20":"20",
+						"default_21":"21",
+						"default_22":"22",
+						"default_23":"23",
+						"default_24":"24",
+						"default_25":"25",
+						"default_26":"26",
+						"default_27":"27",
+						"default_28":"28",
+						"default_29":"29",
+						"default_30":"30"
+			  }
+			},
+	"id":5
+},{
+	"jsonrpc":"2.0",
+	"method":"sequence",
+	"params":{"strAppId":2,
+			  "strData":{}
+			},
+	"id":6
+},
+{
+	"jsonrpc":"2.0",
+	"method":"sequence",
+	"params":{"strAppId":5,
+			  "strData":{"msg":"send a message to queu123123exxxxxxxx"}
+			},
+	"id":7
+},
+{
+	"jsonrpc":"2.0",
+	"method":"sequence",
+	"params":{"strAppId":6,
+			  "strData":{}
+			},
+	"id":8
+}
+]
